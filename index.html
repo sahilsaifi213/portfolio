@@ -1,0 +1,385 @@
+<!--
+  index.html
+  Sahil Saifi Premium Portfolio Website
+  Author: Sahil Saifi | Created by AI (2025)
+  Purpose: Modern, cinematic, fast, responsive showcase for video editor & graphic designer
+  Notes: 
+    - Replace asset paths in /assets/ as needed.
+    - Insert Formspree endpoint in contact form JS (see script.js).
+    - Download Resume PDF at assets/resume.pdf.
+    - For any deployment, update og:url before go-live.
+    - Run through checklist (see README if provided).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahil Saifi — Video Editor & Graphic Designer | Portfolio</title>
+  <meta name="description" content="Portfolio of Sahil Saifi — cinematic video editor and graphic designer. Showcasing cinematic edits, social reels, thumbnails & motion graphics. Available for freelance.">
+  <meta name="keywords" content="video editor, video editing, graphic design, motion graphics, Premiere Pro, After Effects">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sahil Saifi — Video Editor & Graphic Designer | Portfolio">
+  <meta property="og:description" content="Portfolio of Sahil Saifi — cinematic video editor and graphic designer. Showcasing cinematic edits, social reels, thumbnails & motion graphics. Available for freelance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-DEPLOYMENT-URL.com">
+  <meta property="og:image" content="assets/profile.jpg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sahil Saifi — Video Editor & Graphic Designer | Portfolio">
+  <meta name="twitter:description" content="Portfolio of Sahil Saifi — cinematic video editor and graphic designer. Showcasing cinematic edits, social reels, thumbnails & motion graphics.">
+  <meta name="twitter:image" content="assets/profile.jpg">
+  <!-- Font: Poppins + FontAwesome -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sahil Saifi",
+      "jobTitle": "Video Editor & Graphic Designer",
+      "url": "https://YOUR-DEPLOYMENT-URL.com",
+      "sameAs": [
+        "https://www.youtube.com/c/YOUR_CHANNEL",
+        "mailto:sahil.email@example.com",
+        "tel:+919998887776"
+      ]
+    }
+  </script>
+  <!-- Google Analytics: Optional, insert GA/GA4 code below (commented) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); gtag('config', 'G-XXXX');
+  </script>
+  -->
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header class="main-header" role="banner">
+    <nav class="navbar" aria-label="Main">
+      <div class="nav-logo">
+        <a href="#hero" class="logo-text"><span>Sahil Saifi</span></a>
+      </div>
+      <ul class="nav-links" id="navLinks" aria-label="Site sections" role="navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta nav-desktop"><a href="#portfolio" class="btn gradient-btn">View My Work</a></li>
+        <li class="nav-cta nav-desktop">
+  <a href="resume/index.html" class="btn outline-btn download-resume" target="_blank" rel="noopener">Download Resume</a>
+</li>
+      </ul>
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+        <span class="hamburger-icon"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section" aria-label="Introduction">
+    <div class="hero-bg">
+      <!-- Desktop video background -->
+      <video id="heroVideo" class="hero-video" src="assets/herovideo.mp4" autoplay muted loop playsinline poster="assets/hero-fallback.jpg"></video>
+      <!-- Mobile fallback -->
+      <img src="assets/hero-fallback.jpg" alt="Cinematic blue-cyan-purple hero background" class="hero-fallback-img" loading="lazy">
+      <div class="hero-gradient-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi, I’m Sahil Saifi — a passionate <span class="highlight">Video Editor & Graphic Designer</span>.</h1>
+        <p class="hero-subtext">Cinematic storytelling for brands & creators with creative editing and motion graphics.</p>
+        <div class="hero-typing" aria-live="polite">
+          <!-- Typing effect inserted by JS -->
+          <span id="typed"></span>
+        </div>
+        <div class="hero-ctas">
+          <a href="#portfolio" class="btn gradient-btn hero-btn">View My Work</a>
+          <a href="resume/index.html" class="btn outline-btn hero-btn download-resume" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <div class="hero-contact-row">
+          <a href="tel:+91-7065xxxx26" class="hero-contact"><i class="fa-solid fa-phone"></i> +91 99988 87776</a>
+          <a href="mailto:sahil.email@example.com" class="hero-contact"><i class="fa-solid fa-envelope"></i>doctorofedit2@gmail.com</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="profile-card glass-card">
+          <img src="assets/myimage.jpg" class="profile-img" alt="Sahil Saifi profile picture" loading="lazy">
+          <h2 class="profile-name">Sahil Saifi</h2>
+          <p class="profile-title">Video Editor & Graphic Designer</p>
+          <div class="profile-socials">
+            <a href="https://youtube.com/@untoldtv-stories?si=yxj5hMVHRd29mhvy" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/doctorofedit" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.behance.net/doctorofedit" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <!-- Add more as needed -->
+          </div>
+        </div>
+      </div>
+      <!-- Hero Play/Pause Button -->
+      <button id="heroPlayPause" class="hero-playpause" aria-label="Play or pause hero video">
+        <i class="fa-solid fa-play"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about-section container" aria-label="About Sahil">
+    <div class="about-row">
+      <div class="about-img">
+        <img src="assets/myimage.jpg" alt="Sahil Saifi profile portrait" loading="lazy">
+      </div>
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          I’m Sahil Saifi — a passionate video editor and graphic designer working with creators and brands to produce cinematic edits, engaging social reels, and stunning motion graphics.<br>
+          I use <span class="badge">Premiere Pro</span>, <span class="badge">After Effects</span>, <span class="badge">Photoshop</span>, <span class="badge">Illustrator</span> for a premium result every time.<br>
+          From logo design to dynamic video storytelling, I deliver visual content that inspires audiences.
+        </p>
+        <ul class="about-skills">
+          <li><span class="badge">Cinematic Video Editing</span></li>
+          <li><span class="badge">Graphic Design</span></li>
+          <li><span class="badge">Motion Graphics</span></li>
+          <li><span class="badge">Social Media Reels</span></li>
+          <li><span class="badge">Logo & Thumbnail Design</span></li>
+        </ul>
+        <div class="about-buttons">
+          <a href="#portfolio" class="btn gradient-btn">See My Work</a>
+          <a href="resume/index.html" class="btn outline-btn download-resume" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="portfolio-section container" aria-label="Portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-category">
+      <h3>Cinematic Edits</h3>
+      <div class="portfolio-grid cinematic-grid">
+        <!-- Portfolio cards (replace data-video with your assets) -->
+         <article class="portfolio-card" data-video="assets/videos/3dcrime.mp4">
+          <img src="assets/3dcrimethumb.png" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Documentary Animation</h4>
+            <p>crime documentary</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!-- crime video-->
+        <article class="portfolio-card" data-video="assets/videos/long05.mp4">
+          <img src="assets/longthumb05.jpeg" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Documentry edit</h4>
+            <p>Ramayana</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--card02-->
+        <article class="portfolio-card" data-video="assets/videos/mapanimation.mp4">
+          <img src="assets/mapthumb.png" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Documentary Animation</h4>
+            <p>Documentary map animation</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--card03-->
+        <article class="portfolio-card" data-video="assets/videos/long01.mp4">
+          <img src="assets/longthumb01.png" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Text Animation</h4>
+            <p>Professional Scribble Animation</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--card04-->
+         <article class="portfolio-card" data-video="assets/videos/long04.mp4">
+          <img src="assets/longthumb04.png" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Logo animation</h4>
+            <p>Burger king logo animation</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--CARD05-->
+        <article class="portfolio-card" data-video="assets/videos/long02.mp4">
+          <img src="assets/longthumb02.jpeg" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>3D Floating UI Animation</h4>
+            <p>3D Floating UI Animation in After Effects</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--CARD-06-->
+        <article class="portfolio-card" data-video="assets/videos/long03.mp4">
+          <img src="assets/longthumb06.jpeg" alt="Cinematic Edit 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>documentary edit</h4>
+            <p>documentary with 3d camera motion</p>
+            <span class="play-icon"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+    <div class="portfolio-category">
+      <h3>Social Media Reels</h3>
+      <div class="portfolio-grid reels-grid">
+        <!-- CARD 1 -->
+        <article class="portfolio-card" data-video="assets/videos/short07.mp4" data-vertical="true">
+          <img src="assets/short08thumb.jpeg" alt="Social Reel 1 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Documentry Edit (TATA Salt)</h4>
+            <span class="play-icon pulse"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!-- CARD 2 -->
+        <article class="portfolio-card" data-video="assets/videos/short08.mp4" data-vertical="true">
+          <img src="assets/short09thumb.jpeg" alt="Social Reel 2 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Documentry Edit (Hindustan Unilever)</h4>
+            <span class="play-icon pulse"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!-- CARD 3 -->
+        
+        <!-- CARD 4 -->
+        <article class="portfolio-card" data-video="assets/videos/short04.mp4" data-vertical="true">
+          <img src="assets/short04thumb.jpg" alt="Social Reel 3 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Cinematic Reel</h4>
+            <span class="play-icon pulse"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!-- CARD 5 -->
+        <article class="portfolio-card" data-video="assets/videos/short05.mp4" data-vertical="true">
+          <img src="assets/short07thumb.png" alt="Social Reel 3 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Podcast Reel</h4>
+            <span class="play-icon pulse"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--CARD 6-->
+        <article class="portfolio-card" data-video="assets/videos/short06.mp4" data-vertical="true">
+          <img src="assets/short06thumb.jpg" alt="Social Reel 3 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>Insta(Editor) Reel</h4>
+            <span class="play-icon pulse"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!--CARD 7-->
+        <article class="portfolio-card" data-video="assets/videos/short09.mp4" data-vertical="true">
+          <img src="assets/short10thumb.png" alt="Social Reel 3 Thumbnail" loading="lazy" class="portfolio-thumb">
+          <div class="card-overlay">
+            <h4>(Trending)Cinematic Reel</h4>
+            <span class="play-icon pulse"><i class="fa-solid fa-circle-play"></i></span>
+          </div>
+        </article>
+        <!-- More vertical cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery-section container" aria-label="Gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-filters">
+      <button class="btn filter-btn active" data-filter="all">All</button>
+      <button class="btn filter-btn" data-filter="thumbnails">Thumbnails</button>
+      <button class="btn filter-btn" data-filter="posters">Posters</button>
+      <button class="btn filter-btn" data-filter="logos">Logos</button>
+    </div>
+    <div class="gallery-grid">
+      <!-- Gallery items (replace with your images and captions) -->
+      <div class="gallery-item" data-category="thumbnails">
+        <img src="assets/DOCTOROFEDIT_YouTube_Thumbnail.png" alt="Travel Vlog Thumbnail" loading="lazy">
+        <div class="gallery-caption">Thumbnail</div>
+      </div>
+      <div class="gallery-item" data-category="thumbnails">
+        <img src="assets/thumb-01.webp" alt="Travel Vlog Thumbnail" loading="lazy">
+        <div class="gallery-caption">Thumbnail</div>
+      </div>
+      <div class="gallery-item" data-category="thumbnails">
+        <img src="assets/thumb-02.png" alt="Travel Vlog Thumbnail" loading="lazy">
+        <div class="gallery-caption">Thumbnail</div>
+      </div>
+      <div class="gallery-item" data-category="posters">
+        <img src="assets/movieposter.png" alt="Movie Poster Design" loading="lazy">
+        <div class="gallery-caption">Movie Poster Design</div>
+      </div>
+      <div class="gallery-item" data-category="logos">
+        <img src="assets/DOCTOROFEDIT_3D_Character_Render.png" alt="Brand Logo" loading="lazy">
+        <div class="gallery-caption">Brand Logo</div>
+      </div>
+      <!-- More as needed -->
+    </div>
+  </section>
+
+  <!-- YOUTUBE SECTION -->
+  <section id="youtube" class="youtube-section container" aria-label="YouTube Videos">
+    <h2>YouTube</h2>
+    <div class="youtube-channel">
+      <img src="assets/ytbanner.jpg" alt="YouTube Channel Banner" class="youtube-banner" loading="lazy">
+      <a href="https://youtube.com/@untoldtv-stories?si=yxj5hMVHRd29mhvy" target="_blank" class="btn gradient-btn">Visit Channel</a>
+      <span class="youtube-cta">Subscribe for edits, tips & reels!</span>
+    </div>
+    <div class="youtube-videos">
+      <!-- Embed latest videos, replace with your own IDs -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2TWAwxu1368?si=lcpuTbPFiHOqgR7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/eI_WstQyqBA?si=aNvbl--9KRgH4Pk8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <!-- More as needed -->
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section container" aria-label="Contact Sahil">
+    <h2>Contact</h2>
+    <div class="contact-row">
+      <div class="contact-info">
+        <ul>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+919998887776">+91 99988 87776</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:doctorofedit2@gmail.com">sahil.email@example.com</a></li>
+          <li><i class="fab fa-youtube"></i> <a href="https://youtube.com/@untoldtv-stories?si=yxj5hMVHRd29mhvy" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="contact-form-container">
+        <form id="contactForm" aria-label="Contact form">
+          <input type="text" name="name" placeholder="Name*" required autocomplete="name">
+          <input type="email" name="email" placeholder="Email*" required autocomplete="email">
+          <textarea name="message" placeholder="Your message*" required></textarea>
+          <input type="hidden" name="subject" value="Portfolio Contact">
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_gotcha" style="display:none">
+          <button type="submit" class="btn gradient-btn">Send</button>
+          <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          <!-- TODO: Insert Formspree endpoint for fetch/XHR in script.js -->
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="footer-content">
+      <small>Copyright © 2025 Sahil Saifi — All rights reserved.</small>
+      <small>Designed & Developed by Sahil Saifi.</small>
+      <div class="footer-socials">
+        <a href="https://youtube.com/@untoldtv-stories?si=yxj5hMVHRd29mhvy" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/doctorofedit" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.behance.net/doctorofedit" aria-label="Behance"><i class="fab fa-behance"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- Main JS, defer to improve perf -->
+  <script src="script.js" defer></script>
+</body>
+</html>
